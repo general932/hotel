@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+<meta charset="UTF-8">
+<title>مدیریت اتاق‌های هتل</title>
+
+<style>
+body{
+    font-family: Tahoma, sans-serif;
+    direction: rtl;
+    background:#f2f4f7;
+    padding:40px;
+}
+
+h1{
+    text-align:center;
+    margin-bottom:30px;
+}
+
+table{
+    width:90%;
+    margin:auto;
+    border-collapse:collapse;
+    background:#fff;
+    box-shadow:0 0 15px rgba(0,0,0,0.1);
+}
+
+th, td{
+    padding:12px;
+    text-align:center;
+    border-bottom:1px solid #ddd;
+}
+
+th{
+    background:#222;
+    color:#fff;
+}
+
+.status{
+    padding:6px 14px;
+    border-radius:6px;
+    cursor:pointer;
+    color:#fff;
+    font-weight:bold;
+}
+
+.free{ background:#2ecc71; }
+.full{ background:#e74c3c; }
+
+.price{
+    font-weight:bold;
+    color:#1e8449;
+}
+</style>
+</head>
+
+<body>
+
+<h1>مدیریت اتاق‌های هتل</h1>
+
+<table>
+<tr>
+    <th>شماره اتاق</th>
+    <th>نوع اتاق</th>
+    <th>قیمت</th>
+    <th>وضعیت</th>
+</tr>
+
+<!-- Large -->
+<tr><td>Large 1</td><td>Large</td><td class="price">40 RP</td><td><span class="status free" onclick="toggle(this)">خالی</span></td></tr>
+<tr><td>Large 2</td><td>Large</td><td class="price">40 RP</td><td><span class="status free" onclick="toggle(this)">خالی</span></td></tr>
+<tr><td>Large 3</td><td>Large</td><td class="price">40 RP</td><td><span class="status free" onclick="toggle(this)">خالی</span></td></tr>
+<tr><td>Large 4</td><td>Large</td><td class="price">40 RP</td><td><span class="status free" onclick="toggle(this)">خالی</span></td></tr>
+<tr><td>Large 5</td><td>Large</td><td class="price">40 RP</td><td><span class="status free" onclick="toggle(this)">خالی</span></td></tr>
+<tr><td>Large 6</td><td>Large</td><td class="price">40 RP</td><td><span class="status free" onclick="toggle(this)">خالی</span></td></tr>
+
+<!-- Small -->
+<tr><td>Small 1</td><td>Small</td><td class="price">10 RP</td><td><span class="status free" onclick="toggle(this)">خالی</span></td></tr>
+<tr><td>Small 2</td><td>Small</td><td class="price">10 RP</td><td><span class="status free" onclick="toggle(this)">خالی</span></td></tr>
+
+<!-- Medium With Window -->
+<tr><td>Medium W1</td><td>Medium (With Window)</td><td class="price">30 RP</td><td><span class="status free" onclick="toggle(this)">خالی</span></td></tr>
+<tr><td>Medium W2</td><td>Medium (With Window)</td><td class="price">30 RP</td><td><span class="status free" onclick="toggle(this)">خالی</span></td></tr>
+
+<!-- Large With Window -->
+<tr><td>Large W1</td><td>Large (With Window)</td><td class="price">50 RP</td><td><span class="status free" onclick="toggle(this)">خالی</span></td></tr>
+<tr><td>Large W2</td><td>Large (With Window)</td><td class="price">50 RP</td><td><span class="status free" onclick="toggle(this)">خالی</span></td></tr>
+
+</table>
+
+<script>
+function toggle(el){
+    if(el.classList.contains("free")){
+        el.classList.remove("free");
+        el.classList.add("full");
+        el.innerText = "پر";
+    }else{
+        el.classList.remove("full");
+        el.classList.add("free");
+        el.innerText = "خالی";
+    }
+}
+</script>
+
+</body>
+</html>
